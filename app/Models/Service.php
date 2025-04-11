@@ -9,5 +9,5 @@ class Service extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'email', 'phone']; // Pastikan nama field sesuai dengan database
+    protected $fillable = ['name', 'email', 'phone'];
 }

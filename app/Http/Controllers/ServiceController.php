@@ -10,8 +10,7 @@ class ServiceController extends Controller
     public function index(Request $request)
     {
         $query = Service::query();
-    
-        // Cek apakah ada input pencarian
+        
         if ($request->has('search') && !empty($request->search)) {
             $query->where('name', 'like', '%' . $request->search . '%');
         }

@@ -33,7 +33,42 @@
 </head>
 <body class="font-sans text-white bg-black">
 
-  <div class="flex min-h-screen">
+<div class="flex min-h-screen ml-0 md:ml-64">
+
+<!-- Sidebar -->
+<aside class="fixed top-0 left-0 h-full w-[290px] bg-gradient-to-b from-black via-red-900 to-black text-white shadow-lg hidden md:block z-50 flex flex-col items-center pt-10">
+
+
+<!-- FOTO & NAMA -->
+  <div class="text-center mb-10">
+    <img src="{{ asset('images/alicee.jpg') }}" alt="Profile" class="w-24 h-24 rounded-full mx-auto border-4 border-white shadow-md">
+    <h3 class="mt-4 text-lg font-semibold">Cia</h3>
+  </div>
+
+  <!-- NAV MENU -->
+  <ul class="w-full space-y-2 text-sm font-medium px-6">
+    <li>
+      <a href="#home" class="flex items-center gap-3 p-3 rounded-lg hover:bg-red-600 transition duration-200">
+        <i class="fas fa-home"></i> Home
+      </a>
+    </li>
+    <li>
+      <a href="#about" class="flex items-center gap-3 p-3 rounded-lg hover:bg-red-600 transition duration-200">
+        <i class="fas fa-user"></i> About
+      </a>
+    </li>
+    <li>
+      <a href="#services" class="flex items-center gap-3 p-3 rounded-lg hover:bg-red-600 transition duration-200">
+        <i class="fas fa-cogs"></i> Services
+      </a>
+    </li>
+    <li>
+      <a href="#projects" class="flex items-center gap-3 p-3 rounded-lg hover:bg-red-600 transition duration-200">
+        <i class="fas fa-folder-open"></i> Projects
+      </a>
+    </li>
+  </ul>
+</aside>
 
     <!-- Main Content -->
     <div class="flex-1 bg-black px-10">
@@ -51,44 +86,43 @@
         <a href="#" class="bg-red-600 text-white px-5 py-2 rounded-lg font-bold">Contact</a>
       </div>
 
-<!-- Hero Section -->
-<section id="home" class="flex items-center justify-center min-h-screen" data-aos="fade-up">
-  <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-10 w-full max-w-6xl mx-auto px-4">
-    
-    <!-- KIRI -->
-    <div class="flex flex-col justify-center items-center text-center h-full">
-      <h1 class="text-4xl md:text-5xl font-bold mb-2">
-        Hi, I'm <span class="font-script">Alice</span>
-      </h1>
-      <h2 class="text-3xl md:text-4xl font-bold text-red-600 mt-2 mb-4">
-        <span id="typed-text"></span>
-      </h2>
-      <div class="mt-6">
-        <span class="block mb-2">Find Me on</span>
-        <div class="flex justify-center space-x-4 text-xl">
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-linkedin"></i>
-          <i class="fab fa-pinterest"></i>
+      <!-- Hero Section -->
+      <section id="home" class="flex items-center justify-center min-h-screen" data-aos="fade-up">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-10 w-full max-w-6xl mx-auto px-4">
+
+          <!-- KIRI -->
+          <div class="flex flex-col justify-center items-center text-center h-full">
+            <h1 class="text-4xl md:text-5xl font-bold mb-2">
+              Hi, I'm <span class="font-script">Alice</span>
+            </h1>
+            <h2 class="text-3xl md:text-4xl font-bold text-red-600 mt-2 mb-4">
+              <span id="typed-text"></span>
+            </h2>
+            <div class="mt-6">
+              <span class="block mb-2">Find Me on</span>
+              <div class="flex justify-center space-x-4 text-xl">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-pinterest"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- KANAN (FOTO) -->
+          <div class="flex justify-center md:justify-end items-center mt-10 md:mt-0">
+            <img src="{{ asset('images/alicee.jpg') }}" alt="Alice" class="relative z-10 w-52 md:w-64 drop-shadow-2xl">
+          </div>
         </div>
-      </div>
-    </div>
-
-    <!-- KANAN (FOTO) -->
-    <div class="flex justify-center md:justify-end items-center mt-10 md:mt-0">
-      <img src="{{ asset('images/alicee.jpg') }}" alt="Alice" class="relative z-10 w-52 md:w-64 drop-shadow-2xl">
-    </div>
-  </div>
-</section>
-
+      </section>
 
       <!-- About Section -->
       <section id="about" data-aos="fade-up">
         <div>
-        <h2 class="text-3xl font-bold mb-2 border-b-4 border-white inline-block">About Me</h2>
-        <h2 class="text-2xl md:text-2xl font-bold mt-4">
-        Perkenalkan saya Alicia Gracia dari jurusan Computer Science B27, Universitas Bina Nusantara.<br>
-        Saya adalah mahasiswi aktif semester 4, di bawah ini adalah beberapa informasi pribadi saya.
-        </h2>
+          <h2 class="text-3xl font-bold mb-2 border-b-4 border-white inline-block">About Me</h2>
+          <h2 class="text-2xl md:text-2xl font-bold mt-4">
+            Perkenalkan saya Alicia Gracia dari jurusan Computer Science B27, Universitas Bina Nusantara.<br>
+            Saya adalah mahasiswi aktif semester 4, di bawah ini adalah beberapa informasi pribadi saya.
+          </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
             <ul class="space-y-3">
               <li><strong>Name:</strong> Alicia Gracia</li>
@@ -111,7 +145,7 @@
           <p class="mt-4 text-gray-300 leading-relaxed"> Saya membuat function CRUD pada penambahan data pribadi yang meliputi nama, email, dan phone.</p>
           <a href="{{ url('/services') }}" class="mt-8 inline-block bg-red-700 text-white font-semibold py-4 px-6 rounded-lg hover:bg-red-800 transition duration-300">
             Services for CRUD
-          </a> 
+          </a>
         </div>
       </section>
 

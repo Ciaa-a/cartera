@@ -24,7 +24,6 @@
     </nav>
 
     <div class="container py-4">
-        <!-- Tombol Kembali (akan muncul jika ada halaman sebelumnya) -->
         @if (url()->previous())
             <a href="{{ url()->previous() }}" class="btn btn-primary mb-3 btn-back">
                 <i class="fas fa-arrow-left"></i>
@@ -34,8 +33,7 @@
         <!-- Konten Halaman -->
         @yield('content')
     </div>
-
-    <!-- Bootstrap JS (untuk interaktivitas seperti dropdown, modal, dll.) -->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

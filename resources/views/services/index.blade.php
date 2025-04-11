@@ -14,7 +14,7 @@
     <form action="{{ route('services.index') }}" method="GET" class="mb-4">
         <div class="input-group">
             <input type="text" name="search" class="form-control" placeholder="Search by name..." value="{{ request('search') }}">
-            <button type="button" class="btn btn-info">Search</button>
+            <button type="submit" class="btn btn-info">Search</button>
         </div>
     </form>
 
